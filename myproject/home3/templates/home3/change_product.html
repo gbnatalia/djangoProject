@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование продукта{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!--table>{{ form.as_table }}</table-->
+        {{ form.as_div }}
+        <input type="submit" value="Принять">
+    </form>
+{% endblock %}
